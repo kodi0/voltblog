@@ -1,7 +1,8 @@
-Example of project made with Volt
-https://github.com/voltrb/volt/
+Example of project made with 
+[Volt](https://github.com/voltrb/volt/)
 
 Простой блог
+
 1. Регистрация
 2. Авторизация
 3. Можно добавить статью
