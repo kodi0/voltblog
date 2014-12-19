@@ -6,7 +6,7 @@
     <div class="header">
       <ul class="nav nav-pills pull-right">
         <:nav href="/" text="Home" />
-        <:nav href="/articles" text="Articles" />
+        <:nav href="/" text="Articles" />
         <:nav href="/about" text="About" />
         <:user-templates:menu />
       </ul>
@@ -27,4 +27,3 @@
   <li class="{{ if active_tab? }}active{{ end }}">
     <a href="{{ attrs.href }}">{{ attrs.text }}</a>
   </li>
-
