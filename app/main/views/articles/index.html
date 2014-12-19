@@ -1,0 +1,23 @@
+<:Title>
+Articles
+
+<:Body>
+<h2> Статьи </h2>
+<ul>
+ {{ store._articles.each do |a|}}
+  <li>
+    <a href="/articles/{{a._id}}">{{a.title}}</a>
+    <a href="" e-click="delete(a)">Delete</a>
+  </li>
+ {{end}}
+</ul>
+<br>
+<form e-submit="create" role="form">
+ <div class="form-group">
+   <input class="form-control" type="text" value="{{page._article._title}}" placeholder="Title">
+   <br>
+   <textarea class="form-control" value="{{page._article._subject}}" placeholder="Subject"></textarea>  
+   <br>
+   <input type="submit" class="btn"></input>
+ </div> 
+</form>
