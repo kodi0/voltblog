@@ -1,0 +1,11 @@
+<:Title>
+  Articles
+<:Body>
+  <h2>Articles</h2>
+  {{page.class}}
+  <ul>
+  {{ store._users.each do |u|}}
+    <li>{{u._name}}</li>
+  {{end}}
+  </ul>
+

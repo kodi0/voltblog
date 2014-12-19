@@ -8,6 +8,9 @@ class MainController < Volt::ModelController
     # Add code for when the about view is loaded
   end
 
+  def articles
+  end
+
   private
 
   # The main template contains a #template binding that shows another
