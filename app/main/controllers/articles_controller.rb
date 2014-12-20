@@ -5,7 +5,7 @@ class ArticlesController < Volt::ModelController
 
   def show
     # Add code for when the about view is loaded
-    store._articles.find_one(_id: params._id)
+     store._articles.find_one(_id: params._id)
   end
 
   def update

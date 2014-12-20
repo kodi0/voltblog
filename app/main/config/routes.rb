@@ -2,7 +2,7 @@
 
 get '/about', _action: 'about'
 get '/articles', _controller: 'articles' , _action: 'index'
-get '/articles/{{_id}}', _controller: 'articles', _action: 'show'
+get '/articles/{{__id}}', _controller: 'articles', _action: 'show'
 # Routes for login and signup, provided by user-templates component gem
 get '/signup', _controller: 'user-templates', _action: 'signup'
 get '/login', _controller: 'user-templates', _action: 'login'

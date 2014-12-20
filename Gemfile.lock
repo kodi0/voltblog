@@ -103,7 +103,7 @@ GEM
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    volt (0.8.26)
+    volt (0.8.27.beta1)
       bcrypt (~> 3.1.9)
       bundler (>= 1.5)
       capybara (~> 2.4.2)
@@ -152,7 +152,7 @@ PLATFORMS
 DEPENDENCIES
   bson_ext (~> 1.9.0)
   thin (~> 1.6.0)
-  volt (= 0.8.26)
+  volt (= 0.8.27.beta1)
   volt-bootstrap
   volt-bootstrap-jumbotron-theme
   volt-user-templates
