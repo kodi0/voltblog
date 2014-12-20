@@ -1,0 +1,10 @@
+<:Title>
+    Profile of user
+
+<:Body>
+    {{ ['name', 'email'].each do |prop| }}
+        <div class="row">
+            <div class="col-lg-4">{{prop.capitalize}}:</div>
+            <div class="col-lg-8">{{user.send("_#{prop}")}}</div>
+        </div>
+    {{ end }}
