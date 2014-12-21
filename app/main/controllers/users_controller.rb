@@ -24,7 +24,17 @@ class UsersController < AppController
     find_user params._id
   end
   
-  def show_current_user
+  def account
+  end
+  
+  private
+  
+  def current_user_articles
+    store._articles.select{|a| a.user_id == current_user._id}
+  end
+  
+  def owner?(a)
+    current_user == find_user(a.user_id)
   end
 
 end

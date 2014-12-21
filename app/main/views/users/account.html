@@ -17,6 +17,13 @@
     {{ end }}
    <hr>     
    <h2>Ваши статьи</h2>
-   {{ store._articles.select{|a| a.user_id == current_user._id}.each do |article| }}
-     <a href="/articles/{{article._id}}">{{article._title}}</a>
+   {{ current_user_articles.each do |a| }}
+     <h3><a href="/articles/{{article._id}}">{{a._title}}</a></h3>
+     <p><span class="glyphicon glyphicon-time"></span> Posted on {{a.created_at}} by <a
+                        href="/users/{{a.user_id}}">{{find_user(a.user_id)._name}}</a></p>
+
+     {{if logged_in? && owner?(a)}}
+        <a href="" e-click="delete(a)">Delete</a>
+     {{end}}
    {{end}}
+   
