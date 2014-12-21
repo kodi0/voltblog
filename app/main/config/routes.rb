@@ -7,6 +7,7 @@ get '/signup', _controller: 'user-templates', _action: 'signup'
 get '/login', _controller: 'user-templates', _action: 'login'
 
 get '/users/{{__id}}', _controller: 'users', _action: 'show'
+get '/account', _controller: 'users', _action: 'account'
 
 # The main route, this should be last. It will match any params not
 # previously matched.
