@@ -9,8 +9,9 @@
             {{ store._articles.each do |a| }}
             <div class="col-lg-12">
                 <h2><a href="/articles/{{a._id}}">{{ a.title }}</a></h2>
+                {{if logged_in? && current_user == find_user(a.user_id)}}
                 <a href="" e-click="delete(a)">Delete</a>
-
+                {{end}}   
                 <p><span class="glyphicon glyphicon-time"></span> Posted on {{a.created_at}} by <a
                         href="/users/{{a.user_id}}">{{find_user(a.user_id)._name}}</a></p>
 
@@ -21,15 +22,3 @@
             {{ end }}
         </div>
     </div>
-    <br>
-    {{ if logged_in? }}
-    <form e-submit="create" role="form">
-        <div class="form-group">
-            <input class="form-control" type="text" value="{{page._article._title}}" placeholder="Title">
-            <br>
-            <textarea class="form-control" value="{{page._article._subject}}" placeholder="Subject"></textarea>
-            <br>
-            <input type="submit" class="btn">
-        </div>
-    </form>
-    {{ end }}

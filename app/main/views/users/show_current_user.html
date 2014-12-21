@@ -1,0 +1,22 @@
+<:Title>
+    User profile
+    
+<:Body>
+    <h2>Напишем статью </h2>
+    
+    {{ if logged_in? }}
+    <form e-submit="create" role="form">
+        <div class="form-group">
+            <input class="form-control" type="text" value="{{page._article._title}}" placeholder="Title">
+            <br>
+            <textarea class="form-control" value="{{page._article._subject}}" placeholder="Subject"></textarea>
+            <br>
+            <input type="submit" class="btn">
+        </div>
+    </form>
+    {{ end }}
+   <hr>     
+   <h2>Ваши статьи</h2>
+   {{ store._articles.select{|a| a.user_id == current_user._id}.each do |article| }}
+     <a href="/articles/{{article._id}}">{{article._title}}</a>
+   {{end}}
