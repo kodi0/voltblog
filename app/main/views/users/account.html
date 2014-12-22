@@ -1,0 +1,47 @@
+<:Title>
+    My account
+
+<:Body>
+    {{ if logged_in? }}
+        {{ if page._new_article }}
+            <form e-submit="save!" role="form">
+                <div class="form-group">
+                    <input class="form-control" type="text" value="{{ _title }}" placeholder="Title">
+                    <br>
+                    <textarea class="form-control" value="{{ _subject }}" rows="6" placeholder="Subject"></textarea>
+                    <br>
+                    <input type="submit" class="btn" value="Создать">
+                    <button class="btn" e-click="cancel">Отменить</button>
+                </div>
+            </form>
+        {{ else }}
+            <button e-click="new_article">Добавить статью</button>
+        {{ end }}
+
+        <h2>Мои статьи</h2>
+
+        <table class="table">
+            {{ my_articles.each do |a| }}
+                <tr>
+                    <td><a href="/articles/{{a._id}}">{{ a.title }}</a></td>
+                    <td>{{ a.created_at }}</td>
+                    <td><a href="" e-click="edit_article(a)">Edit</a></td>
+                    <td><a href="" e-click="delete_article(a)">Delete</a></td>
+                </tr>
+                {{ if self.model._id == a._id }}
+                    <form e-submit="save!" role="form">
+                        <div class="form-group">
+                            <input class="form-control" type="text" value="{{_title}}" placeholder="Title">
+                            <br>
+                            <textarea class="form-control" value="{{_subject}}" rows="6" placeholder="Subject"></textarea>
+                            <br>
+                            <input type="submit" class="btn" value="Сохранить">
+                            <button class="btn" e-click="cancel">Отменить</button>
+                        </div>
+                    </form>
+                {{ end }}
+            {{ end }}
+        </table>
+    {{ else }}
+        <h3>You are not logged in</h3>
+    {{ end }}
