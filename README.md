@@ -11,7 +11,7 @@ Example of project made with
 
 Как запустить проект
 
-git clone https://github.com/kodi0/voltblog.git
-cd voltblog
-bundle install
-volt s
+ git clone https://github.com/kodi0/voltblog.git
+ cd voltblog
+ bundle install
+ volt s
