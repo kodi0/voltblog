@@ -7,3 +7,5 @@ tmp
 .sass-cache
 .DS_Store
 compiled
+data
+mongod
