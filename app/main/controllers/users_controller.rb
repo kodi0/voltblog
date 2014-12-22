@@ -28,7 +28,7 @@ class UsersController < AppController
   # _new_article property for canceling creatiion of article
   # in cancel call we assign _new_article = false
   def new_article
-    self.model = store._articles.buffer # why buffer for articles? 
+    self.model = store._articles.buffer # creates buffer that assigns to a model which we change latetly
     page._new_article = true            
   end
 
