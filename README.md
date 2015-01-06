@@ -1,17 +1,20 @@
 Example of project made with 
 [Volt](https://github.com/voltrb/volt/)
 
-Простой блог
+Simple blog
 
-1. Регистрация
-2. Авторизация
-3. Можно добавить статью
-4. Статьи выводятся на главной странице
-5. Есть рабочий кабинет юзера, где он может написать статью и видеть уже опубликованные статьи 
+1. Registration
+2. Authorization
+3. Can add an article
+4. Articles are listed on the main page
+5. User has it's own page where he can add articles edit and delete them
 
-Как запустить проект
+To run blog
 
   - git clone https://github.com/kodi0/voltblog.git
   - cd voltblog
   - bundle install
   - volt s
+
+You can improve this code just make pull request.
+Better do this in your own branch then we can compare different versions.
